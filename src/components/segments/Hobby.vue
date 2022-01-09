@@ -1,3 +1,6 @@
+<script setup>
+
+</script>
 <template>
 <v-container>
     <h1>Hobby</h1>
@@ -8,11 +11,6 @@
 </v-container>
     
 </template>
-
-<script setup>
-
-</script>
-
 <style>
 
 </style>
