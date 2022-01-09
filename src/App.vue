@@ -17,7 +17,7 @@ const toggleTheme = () => {
 
 <template>
   <v-app :theme="theme">
-    <v-navigation-drawer v-model="drawer" absolute themporary>
+    <v-navigation-drawer v-model="drawer" app>
       <v-list nav dence>
         <v-list-item to="/">
           <v-list-item-content>
