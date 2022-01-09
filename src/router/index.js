@@ -30,7 +30,8 @@ const routes = [
   //}
 ]
 
-const baseURL =  process.env.NODE_ENV === 'production' ? '/website-vue/' : '/website-vue/';
+//const baseURL =  process.env.NODE_ENV === 'production' ? '/website-vue/' : '/website-vue/';
+const baseURL = import.meta.env.BASE_URL;
 console.log("base : " + baseURL)
 
 const router = createRouter({
