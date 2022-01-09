@@ -1,10 +1,24 @@
+<script setup>
+
+import { ref } from 'vue';
+
+const drawer = ref(false);
+const theme = ref('light');
+
+const toggleDrawer = () => {
+  drawer.value = !drawer.value;
+};
+
+const toggleTheme = () => {
+  theme.value = theme.value === 'light' ? 'dark' : 'light';
+};
+
+</script>
+
 <template>
-  <v-app>
-    <v-navigation-drawer v-model="drawer" app>
+  <v-app :theme="theme">
+    <v-navigation-drawer v-model="drawer" absolute themporary>
       <v-list nav dence>
-        <v-list-item>
-          <v-list-item-content ><v-btn @click="drawer = false" text>Close</v-btn></v-list-item-content>
-        </v-list-item>
         <v-list-item to="/">
           <v-list-item-content>
             <v-list-item-title>About</v-list-item-title>
@@ -20,40 +34,31 @@
             <v-list-item-title>Posts</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
-        <v-list-item href="">
+        <v-list-item href="https://github.com/sYamaz/website-vue">
           <v-list-item-content>
             <v-list-item-title>Source</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
       </v-list>
-      
     </v-navigation-drawer>
     <v-app-bar>
       <v-app-bar-title>sYamaz</v-app-bar-title>
       <v-spacer></v-spacer>
-      <v-btn to="/">About</v-btn>
-      <v-btn to="/works">Works</v-btn>
-      <v-btn to="/posts">Posts</v-btn>
-      <v-btn text>Source</v-btn>
-      <v-btn @click="theme = theme === 'light' ? 'dark' : 'light'" text>toggle theme</v-btn>
-      <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
+      <v-btn @click="toggleTheme">theme</v-btn>
+      <v-app-bar-nav-icon @click="toggleDrawer"></v-app-bar-nav-icon>
     </v-app-bar>
     <v-main>
       <router-view></router-view>
     </v-main>
     <v-footer app>
-      
+      <v-container style>
+        <v-row>
+          <v-spacer></v-spacer>@2022 Shun Yamazaki. All Rights Reserved.
+          <v-spacer></v-spacer>
+        </v-row>
+      </v-container>
     </v-footer>
   </v-app>
 </template>
 
-<script setup>
-import HelloWorld from './components/HelloWorld.vue';
-import { ref } from 'vue';
 
-const prop = defineProps({
-  drawer:false,
-  //theme:'light'
-})
-
-</script>
