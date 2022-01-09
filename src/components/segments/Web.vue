@@ -2,7 +2,7 @@
     <v-container>
         <h1>Web</h1>
         <v-container v-for="link in links" v-bind:key="link">
-            <v-btn :href="link.url" flat>{{link.name}}</v-btn>
+            <v-btn class="text-info" :href="link.url" flat><span class="text-info">{{link.name}}</span></v-btn>
         </v-container>
     </v-container>
 </template>
