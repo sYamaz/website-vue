@@ -30,8 +30,11 @@ const routes = [
   //}
 ]
 
+const baseURL =  process.env.NODE_ENV === 'production' ? '/website-vue/' : '/website-vue/';
+console.log("base : " + baseURL)
+
 const router = createRouter({
-  history: createWebHistory(process.env.BASE_URL),
+  history: createWebHistory(baseURL),
   routes
 })
 
