@@ -1,16 +1,3 @@
-<template>
-  <v-container>
-    <h1>About</h1>
-    <v-container>
-    <v-card>
-    <BiographyVue></BiographyVue>
-    <HobbyVue></HobbyVue>
-    <WebVue></WebVue>
-    </v-card>
-    </v-container>
-  </v-container>
-</template>
-
 <script setup lang="ts">
 import { defineComponent } from '@vue/runtime-core';
 import BiographyVue from './segments/Biography.vue';
@@ -25,6 +12,17 @@ export default defineComponent({
   }
 });
 </script>
-
+<template>
+  <v-container>
+    <h1>About</h1>
+    <v-container>
+    <v-card>
+    <BiographyVue></BiographyVue>
+    <HobbyVue></HobbyVue>
+    <WebVue></WebVue>
+    </v-card>
+    </v-container>
+  </v-container>
+</template>
 <style>
 </style>

@@ -1,12 +1,3 @@
-<template>
-    <v-container>
-        <h1>Web</h1>
-        <v-container v-for="link in links" v-bind:key="link">
-            <v-btn class="text-info" :href="link.url" flat><span class="text-info">{{link.name}}</span></v-btn>
-        </v-container>
-    </v-container>
-</template>
-
 <script setup lang="ts">
 import { defineComponent } from "@vue/runtime-core"
 
@@ -26,5 +17,13 @@ export default defineComponent({
     name:"Web"
 });
 </script>
+<template>
+    <v-container>
+        <h1>Web</h1>
+        <v-container v-for="link in links" v-bind:key="link">
+            <v-btn class="text-info" :href="link.url" flat><span class="text-info">{{link.name}}</span></v-btn>
+        </v-container>
+    </v-container>
+</template>
 <style>
 </style>

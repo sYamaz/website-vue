@@ -1,3 +1,6 @@
+<script setup lang="ts">
+
+</script>
 <template>
   <v-container>
     <h1>Posts</h1>
@@ -9,11 +12,6 @@
     </v-card>
   </v-container>
 </template>
-
-<script setup lang="ts">
-
-</script>
-
 <style>
 
 </style>
