@@ -3,18 +3,27 @@
     <h1>About</h1>
     <v-container>
     <v-card>
-    <Biography></Biography>
-    <Hobby></Hobby>
-    <Web></Web>
+    <BiographyVue></BiographyVue>
+    <HobbyVue></HobbyVue>
+    <WebVue></WebVue>
     </v-card>
     </v-container>
   </v-container>
 </template>
 
-<script setup>
-import Hobby from './segments/Hobby.vue';
-import Biography from './segments/Biography.vue';
-import Web from './segments/Web.vue';
+<script setup lang="ts">
+import { defineComponent } from '@vue/runtime-core';
+import BiographyVue from './segments/Biography.vue';
+import HobbyVue from './segments/Hobby.vue';
+import WebVue from './segments/Web.vue';
+</script>
+<script lang="ts">
+export default defineComponent({
+  name:"About",
+  components:{
+    BiographyVue, HobbyVue, WebVue
+  }
+});
 </script>
 
 <style>

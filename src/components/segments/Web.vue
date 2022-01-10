@@ -7,7 +7,9 @@
     </v-container>
 </template>
 
-<script setup>
+<script setup lang="ts">
+import { defineComponent } from "@vue/runtime-core"
+
 const links = [
     {
         name: "Twitter(@ShunYamazaki5)",
@@ -19,6 +21,10 @@ const links = [
     }
 ]
 </script>
-
+<script lang="ts">
+export default defineComponent({
+    name:"Web"
+});
+</script>
 <style>
 </style>

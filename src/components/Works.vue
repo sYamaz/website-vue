@@ -23,9 +23,24 @@
   </v-container>
 </template>
 
-<script setup>
+<script setup lang="ts">
+
 import routineTreeImg from "../assets/RoutineTree.png"
-const apps = [
+
+type AppItem = {
+  name:String;
+  img:any;
+  text:String;
+  platform:Platform[];
+  status:Status;
+  url:String;
+  outerurl:String;
+}
+
+type Status = "In Review" | "Released"
+type Platform = "web" | "iOS"
+
+const apps:AppItem[] = [
   {
     name: "RoutineTree",
     img: routineTreeImg,

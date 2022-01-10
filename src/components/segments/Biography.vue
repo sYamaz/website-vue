@@ -11,8 +11,14 @@
     </v-container>
 </template>
 
-<script setup>
-const histories = [
+<script setup lang="ts">
+import { defineComponent } from "@vue/runtime-core";
+
+type HistoryItem = {
+    year:String;
+    summery:String;
+};
+const histories: HistoryItem[] = [
     {
         year: "1990",
         summery: "Born in Tokyo, Japan. And moved to Ibaraki."
@@ -25,8 +31,13 @@ const histories = [
         year: "2013 to present",
         summery: "Work as a software developper at Orientalmotor co., ltd."
     }
-]
+];
 
+</script>
+<script lang="ts">
+export default defineComponent({
+   name:"Biograpy",
+});
 </script>
 
 <style>
