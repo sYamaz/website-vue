@@ -1,3 +1,7 @@
+> This project will no longer be updated.
+> 
+> Please see Vue.js and Nuxt.js version ; https://github.com/sYamaz/website-nuxt
+
 # Website-vue
 
 * vuejs
